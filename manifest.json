@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "YT Upnext",
+  "description": "Up next queue for Youtube",
+  "version": "0.0.1",
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*", "*://youtube.com/*"],
+      "js": ["youtube.content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": ["activeTab", "storage", "tabs"]
+}
