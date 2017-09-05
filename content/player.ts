@@ -11,10 +11,10 @@ class Player {
       return;
     }
 
-    // event listener for when video ends
     this.playerElement.addEventListener('ended', this.endedListener.bind(this));
   }
 
+  // event listener for when video ends
   private endedListener(): void {
     console.dir(this.playerElement);
     console.log('ended');
